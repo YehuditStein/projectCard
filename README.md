@@ -1,54 +1,77 @@
-# React + TypeScript + Vite
+Business Card Management System - React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Description
 
-Currently, two official plugins are available:
+This project is a React web application for managing business cards. It includes full user authentication, authorization, content management (CRUD operations), dark mode, favorites, and a responsive modern UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Main Technologies
 
-## Expanding the ESLint configuration
+React
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+TypeScript
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Vite
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Bootstrap, React-Bootstrap
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Formik & Yup for form validation
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Axios for API communication
+
+React Router Dom for navigation
+
+React-toastify for user notifications
+
+React-icons for icons
+
+Key Features
+
+User Registration and Login with token management and role-based permissions
+
+Full CRUD system for managing business cards (Create, Read, Update, Delete)
+
+"My Cards" page to manage user-created cards
+
+Favorite cards feature and Favorites page
+
+Dynamic search for cards
+
+Responsive Design for mobile, tablet, and desktop
+
+Dark Mode toggle
+
+Installation and Local Setup
+
+Run the following commands in the project root:
+
+npm install
+npm run dev
+
+Environment Variables Setup
+
+Create a .env file in the project root with the following content:
+
+VITE_CARDS_API="https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards"
+VITE_USERS_API="https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users"
+
+Project Structure
+
+The project is organized clearly into components, pages, services, contexts, and styles for easy readability and maintenance.
+
+src/
+├── components/
+├── pages/
+├── services/
+├── contexts/
+├── utils/
+├── App.tsx
+├── main.tsx
+└── index.css
+
+API Calls
+
+All HTTP requests are managed with Axios, with centralized services for organization and error handling for better user experience.
+
+Contact
+
+For any questions, feel free to contact me through GitHub.
